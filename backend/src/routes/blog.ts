@@ -1,7 +1,9 @@
 import { Hono } from 'hono'
-import { verify } from 'hono/jwt';
 import { PrismaClient } from '@prisma/client/edge';
 import { withAccelerate } from '@prisma/extension-accelerate'
+import getCurrentDate from '../util/getDate';
+import jwtAuth from '../controllers/jwtAuth';
+import { blogPostSchema, blogPutSchema } from '@sid-sg/blonote-common/dist/zodSchema/blogSchema';
 
 
 type envType = {
@@ -16,42 +18,8 @@ type envType = {
 
 const blogRouter = new Hono<envType>();
 
-function getCurrentDate(): string {
-  const today = new Date();
 
-  const day = today.getDate().toString().padStart(2, '0');
-  const month = (today.getMonth() + 1).toString().padStart(2, '0');
-  const year = today.getFullYear().toString();
 
-  return `${day}-${month}-${year}`;
-}
-
-const jwtAuth = async(c:any,next: any)=>{
-
-  const authHeader = c.req.header("authorization");
-
-  if( !(authHeader) || !(authHeader.startsWith('Bearer'))){
-    c.status(403);
-    return c.json({ message: 'not authorized'});
-  }
-  const token = authHeader.split(' ')[1];
-
-  try{
-    const decoded:any = await verify(token, c.env.JWT_SECRET);
-    if(decoded && decoded.id){
-      c.set('userId', decoded.id);
-      await next();
-    } 
-    else {
-      c.status(403);
-      return c.json({message: 'not authorized'});
-    }
-  } 
-  catch (error) {
-    c.status(403);
-    return c.json({message: 'not authorized'});
-  }
-}
 
 
 blogRouter
@@ -111,6 +79,15 @@ blogRouter
   .post('/', jwtAuth, async(c)=>{
 
     const body = await c.req.json();
+
+    try{
+      blogPostSchema.parse(body);
+    }
+    catch(e){
+      c.status(411);
+      return c.json({error: e});
+    }
+
     const userId = c.get('userId');
     const prisma = new PrismaClient({
       datasourceUrl: c.env.DATABASE_URL,
@@ -130,6 +107,15 @@ blogRouter
   .put('/:id',jwtAuth, async(c)=>{
 
     const body = await c.req.json();
+
+    try{
+      blogPutSchema.parse(body);
+    }
+    catch(e){
+      c.status(411);
+      return c.json({error: e});
+    }
+
     const id:number = parseInt(c.req.param('id'));
     const userId:string = c.get('userId');
     

@@ -4,6 +4,7 @@ import { sign } from 'hono/jwt'
 
 import { PrismaClient } from '@prisma/client/edge';
 import { withAccelerate } from '@prisma/extension-accelerate'
+import { signupSchema, loginSchema } from '@sid-sg/blonote-common/dist/zodSchema/userSchema';
 
 type envType = {
   Bindings: {
@@ -18,6 +19,15 @@ userRouter
   .post('/signup', async(c)=>{
 
     const body = await c.req.json();
+  
+    try{
+      signupSchema.parse(body);
+    }
+    catch(e){
+      c.status(411);
+      return c.json({error: e});
+    }
+
     const prisma = new PrismaClient({
       datasourceUrl: c.env.DATABASE_URL,
     }).$extends(withAccelerate());
@@ -55,6 +65,15 @@ userRouter
   .post('/login', async(c)=>{
 
     const body = await c.req.json();
+
+    try{
+      loginSchema.parse(body);
+    }
+    catch(e){
+      c.status(411);
+      return c.json({error: e});
+    }
+
     const prisma = new PrismaClient({
       datasourceUrl: c.env.DATABASE_URL,
     }).$extends(withAccelerate());
@@ -79,8 +98,7 @@ userRouter
 
     const token = await sign({id: foundUser.id}, c.env.JWT_SECRET);
     return c.json({token: token});    
-
-
+    
   });
 
 export default userRouter;
