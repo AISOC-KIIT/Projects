@@ -24,8 +24,8 @@ userRouter
       signupSchema.parse(body);
     }
     catch(e){
-      c.status(411);
-      return c.json({error: e});
+      c.status(400);
+      return c.json({message: e});
     }
 
     const prisma = new PrismaClient({
@@ -39,7 +39,7 @@ userRouter
     });
     if(foundUser){
      c.status(409);
-		  return c.json({ error: "user already exists"});
+		  return c.json({ message: "user already exists"});
     }
 
     const hashedPassword:string = await createHash(body.plainPassword);
@@ -57,7 +57,7 @@ userRouter
     catch(e){
       console.log(e);
       c.status(403);
-      return c.json({error: "Something wrong happened"})
+      return c.json({message: "Something wrong happened"})
       
     }
   })
@@ -86,14 +86,14 @@ userRouter
 
     if(!foundUser){
      c.status(404);
-		  return c.json({ error: "user not found"});
+		  return c.json({ message: "user not found"});
     }
 
     const samePassword = await validatePassword(foundUser.hashedPassword, body.plainPassword);
 
     if(!samePassword){
       c.status(401);
-		  return c.json({ error: "wrong password"});
+		  return c.json({ message: "wrong password"});
     }
 
     const token = await sign({id: foundUser.id}, c.env.JWT_SECRET);
