@@ -40,27 +40,26 @@ const SignupCard = () => {
       console.log('response:', res.data);
       localStorage.setItem("token",res.data.token);
       
-      navigate('/dashboard');
+      navigate('/');
     } 
     catch (error) {
 
       console.log(error);
       if (axios.isAxiosError(error) && error.response && error.response.status === 400 && error.response.data.message){ //zod error
-        console.log("zod error");
         
-        // const newErrors: Errors = {};
-        // (error.response.data.message.issues as ServerError[]).forEach((err: ServerError) => {
-        //     if(err.message){
-        //         newErrors[err.path[0]] = err.message;
-        //     }
-        //     else{
-        //         newErrors[err.path[0]] = err.code;
-        //     }
+        const newErrors: Errors = {};
+        (error.response.data.message.issues as ServerError[]).forEach((err: ServerError) => {
+            if(err.message){
+                newErrors[err.path[0] as keyof Errors] = err.message;
+            }
+            else{
+                newErrors[err.path[0] as keyof Errors] = err.code;
+            }
           
-        // });
-        // console.log(newErrors);
+        });
+        console.log(newErrors);
         
-        // setErrors(newErrors);
+        setErrors(newErrors);
 
       } 
       else if(axios.isAxiosError(error) && error.response){ //user exists error

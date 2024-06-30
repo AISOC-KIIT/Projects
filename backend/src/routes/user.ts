@@ -70,8 +70,8 @@ userRouter
       loginSchema.parse(body);
     }
     catch(e){
-      c.status(411);
-      return c.json({error: e});
+      c.status(400);
+      return c.json({message: e});
     }
 
     const prisma = new PrismaClient({
