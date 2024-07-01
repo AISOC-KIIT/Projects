@@ -11,7 +11,7 @@ export default {
           500: "#0d0d0e"
         },
         blogGray: {
-          500: "#3d3d43"
+          500: "#18181b"
         }
       }
     },

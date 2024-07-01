@@ -1,6 +1,7 @@
 import { Hono } from 'hono'
 import { createHash, validatePassword } from '../util/passwordHashing';
 import { sign } from 'hono/jwt'
+import jwtAuth from '../controllers/jwtAuth';
 
 import { PrismaClient } from '@prisma/client/edge';
 import { withAccelerate } from '@prisma/extension-accelerate'
@@ -63,6 +64,7 @@ userRouter
   })
 
   .post('/login', async(c)=>{
+    
 
     const body = await c.req.json();
 
@@ -99,6 +101,11 @@ userRouter
     const token = await sign({id: foundUser.id}, c.env.JWT_SECRET);
     return c.json({token: token});    
     
-  });
+  })
+  .post('/validate',jwtAuth ,async(c)=>{
+    console.log("successfully validated");
+    
+    return c.json({ message: "validated"});
+  })
 
 export default userRouter;
