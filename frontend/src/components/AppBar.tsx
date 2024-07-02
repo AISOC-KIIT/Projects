@@ -33,7 +33,7 @@ const AppBar = () => {
         
     }
 
-    if(location.pathname!=="/signup" && location.pathname!=="/login"){
+    if(location.pathname=="/"){
         loggedIn();
     }
   },[]);
@@ -58,7 +58,7 @@ const AppBar = () => {
   return (
     <div className='flex justify-between text-white bg-zinc-900 rounded shadow-md shadow-zinc-800 w-full fixed top-0 z-50 bg-opacity-60 backdrop-filter backdrop-blur-lg'>
         <div className=' tracking-widest px-3 py-4 cursor-pointer' onClick={home}> Blonote</div>
-            {(location.pathname!=="/signup" && location.pathname!=="/login") && <NavButtons valid={valid} logOut={logOut} signUp={signUp} logIn={logIn} write={write} />}
+            {(location.pathname!=="/signup" && location.pathname!=="/login" && location.pathname!=="/new-post") && <NavButtons valid={valid} logOut={logOut} signUp={signUp} logIn={logIn} write={write} />}
             
          </div>
   );

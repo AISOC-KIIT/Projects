@@ -31,9 +31,15 @@ blogRouter
     try{
       const foundBlog = await prisma.blog.findMany({
         select:{
+          id: true,
           title: true,
           content: true,
-          publishedDate: true
+          publishedDate: true,
+          author: {
+            select:{
+              name: true
+            }
+          }
         }
       });
       return c.json({foundBlog});

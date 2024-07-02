@@ -1,5 +1,6 @@
 
 interface BlogCardProps{
+    key: number,
     authorName: string,
     title: string,
     content: string,
