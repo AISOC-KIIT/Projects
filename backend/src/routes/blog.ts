@@ -34,6 +34,8 @@ blogRouter
           id: true,
           title: true,
           content: true,
+          briefContent: true,
+          readingTime: true,
           publishedDate: true,
           author: {
             select:{
@@ -58,28 +60,55 @@ blogRouter
       datasourceUrl: c.env.DATABASE_URL,
     }).$extends(withAccelerate());
 
-    const foundBlog = await prisma.blog.findUnique({
-      where: {
-        id: id
-      }
-    });
-    if(!foundBlog){
-      c.status(404);
-		  return c.json({ error: "blog not found"});
-    }
+    // const foundBlog = await prisma.blog.findUnique({
+    //   where: {
+    //     id: id
+    //   }
+    // });
+    // if(!foundBlog){
+    //   c.status(404);
+		//   return c.json({ error: "blog not found"});
+    // }
 
-    const foundUser = await prisma.user.findUnique({
-      where: {
-        id: foundBlog.authorId
-      }
-    });
+    // const foundUser = await prisma.user.findUnique({
+    //   where: {
+    //     id: foundBlog.authorId
+    //   }
+    // });
 
-    return c.json({
-      title: foundBlog.title,
-      author: foundUser?.name,
-      content: foundBlog.content,
-      publishedDate: foundBlog.publishedDate
-    });
+    // return c.json({
+    //   title: foundBlog.title,
+    //   author: foundUser?.name,
+    //   content: foundBlog.content,
+    //   publishedDate: foundBlog.publishedDate,
+    //   readingTime: foundBlog.readingTime
+    // });
+      try{
+        const foundBlog = await prisma.blog.findUnique({
+          where: {
+            id: id
+          },
+          select:{
+            id: true,
+            title: true,
+            content: true,
+            briefContent: true,
+            readingTime: true,
+            publishedDate: true,
+            author: {
+              select:{
+                name: true
+              }
+            }
+          }
+        });
+        return c.json({foundBlog});
+      }
+      catch(e){
+        console.log(e);
+        c.status(500);
+        return c.json({message: "Something wrong happened"}); 
+      }
   })
 
   .post('/', jwtAuth, async(c)=>{
@@ -99,15 +128,24 @@ blogRouter
       datasourceUrl: c.env.DATABASE_URL,
     }).$extends(withAccelerate());
 
-    const blogs = await prisma.blog.create({
-      data: {
-        title: body.title,
-        content: body.content,
-        authorId: userId,
-        publishedDate: getCurrentDate()
-      }
-    });
-    return c.json(blogs);
+    try{
+      const blogs = await prisma.blog.create({
+        data: {
+          title: body.title,
+          content: body.content,
+          briefContent: body.briefContent,
+          readingTime: body.readingTime,
+          authorId: userId,
+          publishedDate: getCurrentDate()
+        }
+      });
+      return c.json(blogs);
+    }
+    catch(e){
+      c.status(500);
+      return c.json({message: "Something wrong happened"});
+    }
+    
   })
 
   .put('/:id',jwtAuth, async(c)=>{

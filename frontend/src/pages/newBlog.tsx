@@ -3,7 +3,9 @@ import AppBar from "../components/AppBar"
 import Editor from "../components/Editor"
 import ReactTextareaAutosize from "react-textarea-autosize";
 const NewBlog = () => {
-    const[clearClicked,setClearClicked] = useState(false);
+    const [clearClicked,setClearClicked] = useState(false);
+    const [publish,setPublish] = useState(false);
+    const [textareaClicked,setTextareaClicked] = useState(false);
     const [title,setTitle] = useState("");
     
   return (
@@ -19,21 +21,23 @@ const NewBlog = () => {
           </div>
 
           <div className="mt-2 w-11/12 md:w-4/5 lg:w-3/4 mx-auto bg-blogGray-500 flex-grow min-h-72">
-            <Editor clear={clearClicked} onClear={()=>{
+            <Editor title={title} clear={clearClicked} publish={publish}  
+            onClear={()=>{
               setClearClicked(false);
-            }}/>
+            }} 
+            onPublish={()=>{
+              setPublish(false);
+            }}
+            />
           </div>
           <div className="mt-20 mb-20 flex gap-x-5">
 
-              {/* <button className="text-white" onClick={()=>{
-                setClearClicked(true);
-              }}>clear all</button>
-
-              <button className="text-white">publish</button> */}
               <Button value="Clear All" onClick={()=>{
                 setClearClicked(true);
               }}/>
-              <Button value="Publish"/>
+              <Button value="Publish" onClick={()=>{
+                setPublish(true);
+              }}/>
 
           </div>
 

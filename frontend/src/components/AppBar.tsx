@@ -33,7 +33,7 @@ const AppBar = () => {
         
     }
 
-    if(location.pathname=="/"){
+    if(location.pathname=="/" || location.pathname.startsWith("/blog/") ){
         loggedIn();
     }
   },[]);

@@ -1,15 +1,17 @@
+import { Link } from "react-router-dom";
 
 interface BlogCardProps{
-    key: number,
+    id: number,
     authorName: string,
     title: string,
-    content: string,
+    briefContent: string,
     publishedDate : string,
-    readingTime: string
+    readingTime: number
 }
-const BlogCard = ({authorName,title,content,publishedDate,readingTime}: BlogCardProps) => {
+const BlogCard = ({id, authorName,title,briefContent,publishedDate,readingTime}: BlogCardProps) => {
   return (
-    <div className="text-white bg-blogGray-500 hover:bg-neutral-800 cursor-pointer p-3 rounded-lg flex flex-col  justify-center space-y-1 w-11/12 md:w-4/5 lg:w-3/4">
+    <Link to={`/blog/${id}`} className=" w-11/12 md:w-4/5 lg:w-3/4">
+        <div className="text-white bg-blogGray-500 hover:bg-neutral-800 cursor-pointer p-3 rounded-lg flex flex-col  justify-center space-y-1 ">
         <div className="text-normal  md:text-xl lg:text-2xl font-bold">
             {title}
         </div>
@@ -25,12 +27,14 @@ const BlogCard = ({authorName,title,content,publishedDate,readingTime}: BlogCard
             </div>
         </div>
         <div className="text-base md:text-lg font-light break-words">
-            {content.length>=100 ? content.slice(0,100)+"..." : content}
+            {briefContent}
         </div>
         <div className="text-sm text-gray-300 font-thin">
             {readingTime} min read
         </div>
     </div>
+    </Link>
+    
   )
 }
 

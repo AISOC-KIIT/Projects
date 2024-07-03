@@ -25,7 +25,9 @@ model Blog{
   id             Int @id @default(autoincrement())
   title          String 
   content        String 
+  briefContent   String 
   authorId       String
   publishedDate  String
+  readingTime    Int
   author         User @relation(fields: [authorId], references: [id])
 }

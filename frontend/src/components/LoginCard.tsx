@@ -117,6 +117,14 @@ const LoginCard = () => {
           </button>
         </div>
 
+        <div className='text-white mt-2 text-sm text-center'>
+          <p >
+            <span className='underline'>
+              <Link to='/'>Continue as a guest</Link>
+            </span>
+          </p>
+        </div>
+
         <div className="text-sm min-h-0" >
           {errors.other?<p className="text-red-500 text-center font-bold">{errors.other}</p> : <p className="invisible">Error placeholder</p>}
         </div>

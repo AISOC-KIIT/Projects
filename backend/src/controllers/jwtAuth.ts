@@ -10,7 +10,7 @@ const jwtAuth = async(c:any,next: any)=>{
       console.log("if( !(authHeader) || !(authHeader.startsWith('Bearer')))");
       
       c.status(403);
-      return c.json({ message: 'not authorized'});
+      return c.json({ message: 'not authorized line 13'});
     }
     const token = authHeader.split(' ')[1];
   
