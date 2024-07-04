@@ -119,6 +119,15 @@ const LoginCard = () => {
 
         <div className='text-white mt-2 text-sm text-center'>
           <p >
+            Don't have an account?{' '}
+            <span className='underline'>
+              <Link to='/signup'>Sign up</Link>
+            </span>
+          </p>
+        </div>
+
+        <div className='text-white mt-2 text-sm text-center'>
+          <p >
             <span className='underline'>
               <Link to='/'>Continue as a guest</Link>
             </span>

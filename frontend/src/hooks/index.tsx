@@ -42,7 +42,7 @@ export const useBlogs = () => {
     useEffect(()=>{
         const fetchBlogs = async()=>{
             const res = await axios.get(`${BACKEND_URL}/api/v1/blog/bulk`);
-            console.log(res);
+            // console.log(res);
             
             setBlogs(res.data.foundBlog);
             setLoading(false);

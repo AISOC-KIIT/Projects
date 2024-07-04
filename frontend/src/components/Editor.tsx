@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { BACKEND_URL } from "../config";
 
+
 interface EditorType{
     title: string
     clear: boolean, 
@@ -66,8 +67,8 @@ const Editor = ({title,clear, onClear, publish, onPublish}: EditorType) => {
     },[clear]);
 
     function sliceString(inputString: string): string {
-        if (inputString.length > 100) {
-            inputString = inputString.slice(0, 100) + "...";
+        if (inputString.length > 300) {
+            inputString = inputString.slice(0, 300) + "...";
         }
         return inputString;
     }
@@ -83,13 +84,31 @@ const Editor = ({title,clear, onClear, publish, onPublish}: EditorType) => {
     useEffect(()=>{
         async function upload(){
             if(publish){
-                const markdown:string = await editor.blocksToMarkdownLossy(editor.document);
+                // const markdown:string = await editor.blocksToMarkdownLossy(editor.document);
                 // console.log(editor.document);
+
+                let str: string ="";
+    
+                editor.document.map((e)=>{
+                    if(e.type !== "table" && e.type !== "image" && e.content){
+                        e.content.map((s)=>{
+                            if(s.type ==="text" && s.text){
+                                str += s.text;
+                                str+=" ";
+                            }
+                            // console.log(s); 
+                        })
+                    }
+                    
+                });
+
+                // console.log(str);
+                
                 // console.log(JSON.stringify(editor.document));
                 
 
-                let cleanedString:string = markdown.replace(/[^a-zA-Z0-9\s]/g, '');
-                cleanedString = cleanedString.replace(/\s+/g, ' ').trim();
+                // let cleanedString:string = markdown.replace(/[^a-zA-Z0-9\s]/g, '');
+                let cleanedString = str.replace(/\s+/g, ' ').trim();
 
                 const briefContent:string = sliceString(cleanedString);
                 const readingTime:number = getReadingTime(cleanedString);
@@ -102,12 +121,9 @@ const Editor = ({title,clear, onClear, publish, onPublish}: EditorType) => {
                 
                 
                 try{
-                    // const toUpload:uploadType ={
-                    //     title: title,
-                    //     briefContent: briefContent,
-                    //     blocknoteContent:  JSON.stringify(editor.document)
-                    // }
-                    // console.log(toUpload);
+                    // console.log("uploaded");
+                    
+
                     const res = await axios.post(`${BACKEND_URL}/api/v1/blog`,{
                         title: updatedTitle,
                         briefContent,
@@ -119,7 +135,7 @@ const Editor = ({title,clear, onClear, publish, onPublish}: EditorType) => {
                             Authorization: "Bearer "+localStorage.getItem("token")
                         }
                     })
-                    console.log(res);
+                    // console.log(res);
                     
                     navigate('/');
                     
@@ -138,8 +154,6 @@ const Editor = ({title,clear, onClear, publish, onPublish}: EditorType) => {
 
 
   
-    
-
     return <BlockNoteView slashMenu={false} data-theming-css-variables editor={editor} theme={"dark"}  onChange={() => {
         setBlocks(editor.document);
       }}>

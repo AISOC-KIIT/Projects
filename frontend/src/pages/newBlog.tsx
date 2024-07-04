@@ -5,7 +5,6 @@ import ReactTextareaAutosize from "react-textarea-autosize";
 const NewBlog = () => {
     const [clearClicked,setClearClicked] = useState(false);
     const [publish,setPublish] = useState(false);
-    const [textareaClicked,setTextareaClicked] = useState(false);
     const [title,setTitle] = useState("");
     
   return (
@@ -15,9 +14,9 @@ const NewBlog = () => {
         <div className="flex flex-col items-center mt-28">
 
           <div>
-            <ReactTextareaAutosize placeholder="Untitled" onChange={(e)=>{
+            <ReactTextareaAutosize placeholder="Untitled" value={title} onChange={(e)=>{
               setTitle(e.target.value) 
-            }} className=" w-11/12  mx-5 text-white text-5xl bg-transparent font-bold break-words outline-none resize-none"/>
+            }} className="font-sans font-semibold w-11/12  mx-5 text-white text-7xl bg-transparent font-bold break-words outline-none resize-none"/>
           </div>
 
           <div className="mt-2 w-11/12 md:w-4/5 lg:w-3/4 mx-auto bg-blogGray-500 flex-grow min-h-72">
@@ -33,6 +32,7 @@ const NewBlog = () => {
           <div className="mt-20 mb-20 flex gap-x-5">
 
               <Button value="Clear All" onClick={()=>{
+                setTitle("");
                 setClearClicked(true);
               }}/>
               <Button value="Publish" onClick={()=>{
