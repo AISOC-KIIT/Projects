@@ -8,7 +8,7 @@ import {
 import { BlockNoteView } from "@blocknote/mantine";
 import "@blocknote/mantine/style.css";
 import "../editorStyles.css/";
-import { Block, BlockNoteEditor, filterSuggestionItems } from "@blocknote/core";
+import {  BlockNoteEditor, filterSuggestionItems } from "@blocknote/core";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -23,18 +23,13 @@ interface EditorType{
     onPublish: ()=> void,
 }
 
-interface uploadType{
-    title: string,
-    briefContent: string,
-    blocknoteContent: string,
-    readingTime: number
-}
+
 
 const Editor = ({title,clear, onClear, publish, onPublish}: EditorType) => {
 
     const navigate = useNavigate();
     
-    const [blocks, setBlocks] = useState<Block[]>([]);
+    // const [blocks, setBlocks] = useState<Block[]>([]);
     const editor = useCreateBlockNote();
     const [customSlashMenuItems, setCustomSlashMenuItems] = useState<DefaultReactSuggestionItem[]>([]);
 
@@ -124,7 +119,7 @@ const Editor = ({title,clear, onClear, publish, onPublish}: EditorType) => {
                     // console.log("uploaded");
                     
 
-                    const res = await axios.post(`${BACKEND_URL}/api/v1/blog`,{
+                     await axios.post(`${BACKEND_URL}/api/v1/blog`,{
                         title: updatedTitle,
                         briefContent,
                         content: JSON.stringify(editor.document),
@@ -154,9 +149,7 @@ const Editor = ({title,clear, onClear, publish, onPublish}: EditorType) => {
 
 
   
-    return <BlockNoteView slashMenu={false} data-theming-css-variables editor={editor} theme={"dark"}  onChange={() => {
-        setBlocks(editor.document);
-      }}>
+    return <BlockNoteView slashMenu={false} data-theming-css-variables editor={editor} theme={"dark"} >
             <SuggestionMenuController
                 triggerCharacter={"/"}
                 getItems={async (query) => filterSuggestionItems(customSlashMenuItems, query)}

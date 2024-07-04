@@ -1,4 +1,4 @@
-import { Block, BlockNoteEditor, PartialBlock } from "@blocknote/core";
+import {  BlockNoteEditor, PartialBlock } from "@blocknote/core";
 import "@blocknote/core/fonts/inter.css";
 import { BlockNoteView } from "@blocknote/mantine";
 import "@blocknote/mantine/style.css";

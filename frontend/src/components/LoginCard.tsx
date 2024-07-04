@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 // import CardHeading from './CardHeading';
 import { useNavigate } from 'react-router-dom';
 import InputField from './InputFIeld';

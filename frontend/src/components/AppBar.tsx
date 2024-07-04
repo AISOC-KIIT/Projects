@@ -15,14 +15,14 @@ const AppBar = () => {
   const navigate = useNavigate();
   const [valid, setValid] =useState<boolean>(false);
   const location = useLocation();
-  const [token, setToken] =useState<string | null>(localStorage.getItem("token"));
+  // const [token, setToken] =useState<string | null>(localStorage.getItem("token"));
 
   useEffect(()=>{
     async function loggedIn(){
         try{
              await axios.post(`${BACKEND_URL}/api/v1/user/validate`,{}, {
                 headers: {
-                  "Authorization": "Bearer " + token
+                  "Authorization": "Bearer " + localStorage.getItem("token")
                 }
               });
               setValid(true);
@@ -37,7 +37,7 @@ const AppBar = () => {
     if(location.pathname=="/" || location.pathname.startsWith("/blog/") ){
         loggedIn();
     }
-  },[token, location.pathname]);
+  },[]);
 
   const logOut = ()=>{
     localStorage.removeItem("token");

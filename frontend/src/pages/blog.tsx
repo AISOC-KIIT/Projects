@@ -1,13 +1,9 @@
-import { useState } from "react";
 import AppBar from "../components/AppBar"
 import { useParams } from "react-router-dom";
 import Viewer from "../components/Viewer";
 import { useBlog } from "../hooks";
 
-interface storageStringType{
-    title: string,
-    blocknoteContent: string
-}
+
 export const Blog = ()=>{
     const {id} = useParams();
     // const ID: number = parseInt(id ?? "0");
