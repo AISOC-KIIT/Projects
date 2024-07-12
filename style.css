@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.895);
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+p {
+  color: white;
+  font-size: 2rem;
+}
+a {
+  transition: all 0.3s;
+  text-decoration: none;
+  color: white;
+}
+
+/* DESKTOP NAV */
+nav,
+.nav-links {
+  display: flex;
+}
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+a:hover {
+  text-decoration: underline;
+  color: rgba(128, 128, 128, 0.677);
+}
+.logo {
+  cursor: default;
+}
+
+/* SECTIONS */
+
+/* PROFILE */
+.sec_img_container {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  margin: 0 auto;
+}
+.pic {
+  border-radius: 50%;
+}
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  height: 96vh;
+  margin: 0 10rem;
+}
+
+.social {
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+}
+
+.section_text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-self: center;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 35px;
+  margin-right: 10rem;
+}
+.social-container {
+  display: flex;
+  margin-left: 6px;
+  gap: 2.5rem;
+  align-self: center;
+  margin-top: 1rem;
+}
+.linkedin,
+.github {
+  cursor: pointer;
+}
+/* .linkedin:hover,
+.github:hover {
+  width: 2rem;
+  height: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+} */
+.btn-resume {
+  /* background-color: rgba(255, 166, 0, 0.838); */
+  border: rgb(53, 53, 53) 0.3rem solid;
+  padding: 1rem;
+  font-weight: bold;
+  border-radius: 2rem;
+}
+.btn-resume:hover {
+  cursor: pointer;
+  border: rgb(53, 53, 53) 0.5rem solid;
+}
+
+/* ABOUT */
+#about {
+  margin: 0 5rem;
+  height: 33vh;
+}
+.heading {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  /* border-bottom: 1px solid white; */
+}
+span {
+  /* font-size: 2.6rem; */
+  font-weight: 300;
+  font-size: 1.5rem;
+  /* color: gray; */
+}
+.about-1 {
+  /* text-align: center; */
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+#about-myself {
+  /* margin-top: 1.4rem; */
+  /* line-height: 3rem; */
+  font-size: 1.37rem;
+  /* text-align: center; */
+}
+/* SKIILS */
+#skills {
+  margin: 0 5rem;
+  height: 60vh;
+}
+.tools {
+  display: flex;
+  gap: 19%;
+  margin-top: 1.5rem;
+}
+.skill-img {
+  width: 150px;
+  height: 100%;
+  margin-bottom: 10px;
+}
+.html,
+.css,
+.javascript {
+  width: 150px;
+  height: 100%;
+}
+.label {
+  text-align: center;
+}
+/* CONTACTS */
+#contact {
+  margin: 0 5rem;
+  height: 70vh;
+}
+.contact-container {
+  display: flex;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  border: 2px solid gray;
+  margin: 5rem 25rem;
+  margin-top: 3rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: 20px;
+}
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 30px;
+}
+.email-container,
+.linkedin-container {
+  width: auto;
+  display: flex;
+  gap: 10px;
+  align-self: center;
+  justify-content: space-around;
+}
+.email,
+.linkedin-text {
+  font-size: 1rem;
+  cursor: pointer;
+}
+.linkedin,
+.email-logo {
+  height: 1.7rem;
+  width: 1.7rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
