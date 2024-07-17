@@ -1,0 +1,182 @@
+@media (max-width: 1400px) {
+  .about-myself {
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+  }
+  span {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}
+@media (max-width: 1300px) {
+  .conatiner {
+    max-width: 1200px;
+  }
+  #contact {
+    margin-top: 100px;
+  }
+  .about-myself {
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+  }
+  span {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  #Projects {
+    height: 75vh;
+  }
+}
+
+@media (max-width: 1100px) {
+  .conatiner {
+    max-width: 1000px;
+  }
+  #about {
+    margin-bottom: 50px;
+  }
+  .about-myself,
+  .about-1 {
+    font-size: 1rem;
+  }
+  #skills {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 900px) {
+  .conatiner {
+    max-width: 800px;
+  }
+  nav {
+    height: 13vh;
+  }
+  .about-myself,
+  .about-1 {
+    font-size: 0.85rem;
+  }
+  span {
+    font-size: 0.87rem;
+    font-weight: 100;
+  }
+  .overview {
+    font-size: 0.85rem;
+  }
+  .logo,
+  .nav-links {
+    font-size: 1rem;
+  }
+  #profile {
+    height: 50vh;
+  }
+
+  #about {
+    height: 25vh;
+  }
+  .heading {
+    font-size: 1.5rem;
+  }
+  .section_text_1,
+  .section_text_2 {
+    font-size: 1.5rem;
+  }
+  .name {
+    font-size: 2rem;
+  }
+  .btn-resume {
+    padding: 0.75rem;
+  }
+  #skills {
+    height: 35vh;
+  }
+  .skill-img {
+    margin-bottom: 5px;
+  }
+  .java {
+    width: 80px;
+  }
+  .html {
+    width: 110px;
+  }
+  .css {
+    width: 50px;
+  }
+  .label {
+    font-size: 1.5rem;
+  }
+
+  .javascript {
+    width: 50px;
+  }
+  #Projects {
+    height: 55vh;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  .bankist-img {
+    width: 400px;
+  }
+  .contact-container {
+    width: 350px;
+    gap: 10px;
+  }
+  .email,
+  .linkedin-text {
+    font-size: 0.85rem;
+  }
+  .linkedin,
+  .email-logo,
+  .github {
+    height: 1.5rem;
+  }
+}
+@media (max-width: 700px) {
+  .conatiner {
+    max-width: 650px;
+  }
+  .about-myself,
+  .about-1 {
+    font-size: 0.7rem;
+    line-height: 1;
+  }
+  span {
+    font-size: 0.87rem;
+    font-weight: 100;
+  }
+  #Projects {
+    margin-bottom: 150px;
+  }
+  .contact-container {
+    width: 350px;
+    gap: 10px;
+  }
+  .email,
+  .linkedin-text {
+    font-size: 0.75rem;
+  }
+  .linkedin,
+  .email-logo,
+  .github {
+    height: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .conatiner {
+    max-width: 450px;
+  }
+  #about {
+    height: 28vh;
+  }
+  .html,
+  .css,
+  .java {
+    padding-bottom: 7px;
+  }
+  .css {
+    padding-bottom: 9 px;
+  }
+  h2 {
+    font-size: 0.75rem;
+  }
+}
