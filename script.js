@@ -48,6 +48,28 @@ document.querySelector(".email").addEventListener("click", function (e) {
   e.preventDefault();
   window.open("https://mail.google.com/mail/u/3/#inbox", "_blank");
 });
-const nav = document.querySelector(".desktop-nav");
-const navHeight = nav.getBoundingClientRect().height;
-console.log(navHeight);
+
+const bar = document.querySelector(".nav-bar");
+const close = document.querySelector(".nav-close");
+bar.addEventListener("click", function (e) {
+  // console.log(e);
+  document.querySelector(".nav-links").style.opacity = 100;
+  document.querySelector(".nav-links").style.gap = "45px";
+  document.querySelector(".nav-links").style.marginRight = "130px";
+  document.querySelector(".logo").style.opacity = 0;
+  document.querySelector(".nav-close").style.opacity = 100;
+  bar.style.opacity = 0;
+  close.style.zIndex = 100;
+  bar.style.zIndex = 0;
+});
+
+close.addEventListener("click", function () {
+  close.style.opacity = 0;
+  bar.style.opacity = 100;
+  document.querySelector(".nav-links").style.opacity = 0;
+  close.style.zIndex = 0;
+  bar.style.zIndex = 100;
+  document.querySelector(".logo").style.opacity = 100;
+  document.querySelector(".nav-links").style.gap = "10px";
+  document.querySelector(".nav-links").style.marginRight = "0px";
+});

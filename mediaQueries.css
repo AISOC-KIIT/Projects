@@ -195,14 +195,31 @@
   nav {
     justify-content: center;
     align-items: center;
-    height: 17vh;
+    height: 11vh;
     gap: 50px;
+    /* opacity: 0; */
   }
   .nav-links {
-    gap: 0.5rem;
+    gap: 10px;
     list-style: none;
-    font-size: 0.8 qrem;
+    /* margin-right: 90px; */
+    font-size: 0.8rem;
+    opacity: 0;
+    font-size: 0.9rem;
   }
+  .nav-bar {
+    opacity: 100;
+    top: 35px;
+    right: 35px;
+    width: 30px;
+    height: auto;
+  }
+  /* .nav-close {
+    top: 50px;
+    right: 50px;
+    width: 30px;
+    height: auto;
+  } */
   .css {
     margin-right: 20px;
   }
@@ -214,11 +231,18 @@
     font-size: 0.7rem;
   }
   .contact-container {
-    width: 280px;
+    width: 250px;
+    margin-right: 15rem;
+    align-self: center;
+    /* justify-self: center; */
   }
   .email,
   .linkedin-text {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
+  }
+  .description {
+    margin-left: 10px;
+    text-align: start;
   }
   .linkedin,
   .email-logo,
@@ -228,7 +252,13 @@
   }
   .about-1,
   .about-myself {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
+  }
+  .label {
+    font-size: 1.3rem;
+  }
+  span {
+    color: black;
   }
 }
 @media (max-width: 400px) {
@@ -238,6 +268,9 @@
   .logo {
     font-size: 1rem;
   }
+  .label {
+    font-size: 1.3rem;
+  }
   .desktop-nav {
     margin-left: 10px;
     margin-right: 10px;
@@ -245,8 +278,16 @@
   nav {
     justify-content: center;
     align-items: center;
-    height: 17vh;
+    height: 10vh;
     gap: 50px;
+  }
+  .nav-close {
+    top: 20px;
+    right: 20px;
+  }
+  .nav-bar {
+    top: 20px;
+    right: 20px;
   }
   .nav-links {
     gap: 0.5rem;
@@ -272,20 +313,21 @@
   .javascript {
     width: 35px;
     align-self: center;
-    transform: translate(0, -10px);
+    transform: translate(0, -15px);
   }
   .contact-container {
-    width: 250px;
+    width: 200px;
+    margin-right: 10rem;
   }
   .email,
   .linkedin-text {
-    font-size: 0.5rem;
+    font-size: 0.3rem;
   }
   .linkedin,
   .email-logo,
   .github {
-    width: 1rem;
-    height: 1rem;
+    width: 0.7rem;
+    height: 0.7rem;
   }
   .overview,
   .about-1,

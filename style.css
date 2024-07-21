@@ -16,6 +16,7 @@ body {
 .container {
   max-width: 1500px;
   margin: 0 auto;
+  /* position: relative; */
 }
 p {
   color: black;
@@ -266,4 +267,19 @@ h2 {
   width: 1.7rem;
   border-radius: 50%;
   cursor: pointer;
+}
+.nav-bar {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  z-index: 3;
+  opacity: 0;
+}
+.nav-close {
+  position: absolute;
+  opacity: 0;
+  top: 35px;
+  right: 35px;
+  width: 30px;
+  height: auto;
 }
