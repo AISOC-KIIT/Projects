@@ -203,9 +203,11 @@
     gap: 10px;
     list-style: none;
     /* margin-right: 90px; */
+    pointer-events: none;
     font-size: 0.8rem;
     opacity: 0;
     font-size: 0.9rem;
+    cursor: default;
   }
   .nav-bar {
     opacity: 100;
@@ -284,10 +286,12 @@
   .nav-close {
     top: 20px;
     right: 20px;
+    margin-top: 10px;
   }
   .nav-bar {
     top: 20px;
     right: 20px;
+    margin-top: 10px;
   }
   .nav-links {
     gap: 0.5rem;

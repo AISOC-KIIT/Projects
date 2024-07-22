@@ -270,10 +270,11 @@ h2 {
 }
 .nav-bar {
   position: absolute;
-  top: 50px;
-  right: 50px;
+  top: 35px;
+  right: 35px;
   z-index: 3;
   opacity: 0;
+  cursor: pointer;
 }
 .nav-close {
   position: absolute;
@@ -282,4 +283,5 @@ h2 {
   right: 35px;
   width: 30px;
   height: auto;
+  cursor: pointer;
 }

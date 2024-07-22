@@ -1,4 +1,6 @@
 "use strict";
+
+const container = document.querySelector(".container").offsetWidth;
 document.querySelector(".btn-resume").addEventListener("click", function () {
   window.open("./resume/Anant _Sureka_Resume.pdf", "_blank");
   // location.href = "./resume/Anant _Sureka_Resume.pdf";
@@ -61,6 +63,7 @@ bar.addEventListener("click", function (e) {
   bar.style.opacity = 0;
   close.style.zIndex = 100;
   bar.style.zIndex = 0;
+  document.querySelector(".nav-links").style.pointerEvents = "auto";
 });
 
 close.addEventListener("click", function () {
@@ -69,7 +72,22 @@ close.addEventListener("click", function () {
   document.querySelector(".nav-links").style.opacity = 0;
   close.style.zIndex = 0;
   bar.style.zIndex = 100;
+  // if (container > 450) {
+  //   bar.opacity = 0;
+  //   close.opacity = 0;
+  //   document.querySelector(".nav-links").style.opacity = 100;
+  //   document.querySelector(".nav-links").style.pointerEvents = "auto";
+  // } else
+  document.querySelector(".nav-links").style.pointerEvents = "none";
   document.querySelector(".logo").style.opacity = 100;
   document.querySelector(".nav-links").style.gap = "10px";
   document.querySelector(".nav-links").style.marginRight = "0px";
 });
+
+// if (container > 450) {
+//   bar.opacity = 0;
+//   close.opacity = 0;
+//   document.querySelector(".nav-links").style.opacity = 100;
+//   document.querySelector(".nav-links").style.pointerEvents = "auto";
+// }
+console.log(container);
