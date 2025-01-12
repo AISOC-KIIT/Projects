@@ -1,0 +1,101 @@
+/* General reset */
+* {
+    box-sizing: border-box; /* Ensures padding and border are included in width/height */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('wallpaperflare.com_wallpaper\ \(21\).jpg') no-repeat center center fixed; /* Replace with your background image */
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.login-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+}
+  
+.login-card {
+    background: linear-gradient(145deg, #1e1e2e, #252540);
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+}
+  
+.logo img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 20px;
+}
+  
+h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+  
+p {
+    color: #b0b0b0;
+    margin-bottom: 30px;
+}
+  
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+  
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #999;
+}
+  
+input {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    font-size: 16px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    box-sizing: border-box; /* Ensures padding and border are included in width calculation */
+}
+  
+input::placeholder {
+    color: #aaa;
+}
+  
+input:focus {
+    outline: none;
+    border-color: #4e9af1;
+}
+  
+.login-btn {
+    background: #ffb400;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out;
+}
+  
+.login-btn:hover {
+    background: #ff9800;
+}

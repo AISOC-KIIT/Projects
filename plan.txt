@@ -1,0 +1,8 @@
+Project Root
+├── views
+│   ├── admin-login.ejs
+├── public
+│   ├── css
+│   │   ├── admin.css
+│   ├── images
+│   │   ├── logo.png

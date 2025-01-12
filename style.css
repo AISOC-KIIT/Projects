@@ -1,0 +1,69 @@
+/* Reset some basic styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Set up the full-screen background */
+  body {
+    background: url('Untitled\ design\ \(6\).png') no-repeat center center fixed; /* Replace 'your-image.jpg' with your background image file */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Center the button on the screen */
+  .container {
+    text-align: center;
+  }
+  
+  .futuristic-button {
+    background: linear-gradient(135deg, #000, #000, #222);
+    color: #ffffff;
+    font-size: 20px;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Hover effect */
+  .futuristic-button:hover {
+    background: linear-gradient(135deg, #000, #000, #222);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6);
+    transition: all 300ms ease;
+  
+  }
+  
+  /* Additional futuristic animation */
+  .futuristic-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    z-index: 0;
+  }
+  
+  .futuristic-button:hover::before {
+    top: -100%;
+    left: -100%;
+  }
+  
+  .futuristic-button span {
+    position: relative;
+    z-index: 1;
+  }

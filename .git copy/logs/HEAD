@@ -1,0 +1,31 @@
+0000000000000000000000000000000000000000 508d68cc6d1e41258b73485b51b3b78dd633a102 AksTraL <akshat25chauhan.2005@gmail.com> 1733369607 +0530	commit (initial): initial commit
+508d68cc6d1e41258b73485b51b3b78dd633a102 c5204efad951bffe3d44a71980ec06dfc18d14b9 AksTraL <akshat25chauhan.2005@gmail.com> 1733377053 +0530	pull origin main: Fast-forward
+c5204efad951bffe3d44a71980ec06dfc18d14b9 bf145f9c7d4e9a0c7b150f89167a55a47e995ead AksTraL <akshat25chauhan.2005@gmail.com> 1733385106 +0530	pull --tags origin main: Fast-forward
+bf145f9c7d4e9a0c7b150f89167a55a47e995ead b0d7203b0057b7ac3c929b163aeedce201b5f670 AksTraL <akshat25chauhan.2005@gmail.com> 1733408960 +0530	commit: change laptop
+b0d7203b0057b7ac3c929b163aeedce201b5f670 bc4edf860c9d6852b28774dc6c2a2dcfe13c906a AksTraL <akshat25chauhan.2005@gmail.com> 1733408968 +0530	pull --ff --recurse-submodules --progress origin: Merge made by the 'ort' strategy.
+bc4edf860c9d6852b28774dc6c2a2dcfe13c906a bc4edf860c9d6852b28774dc6c2a2dcfe13c906a AksTraL <akshat25chauhan.2005@gmail.com> 1735313184 +0530	reset: moving to HEAD
+bc4edf860c9d6852b28774dc6c2a2dcfe13c906a 944ee9b04dc56ea27f0a8aca55170ff3d36bfe15 AksTraL <akshat25chauhan.2005@gmail.com> 1735313184 +0530	checkout: moving from main to PC-Branch
+944ee9b04dc56ea27f0a8aca55170ff3d36bfe15 944ee9b04dc56ea27f0a8aca55170ff3d36bfe15 AksTraL <akshat25chauhan.2005@gmail.com> 1735452664 +0530	reset: moving to HEAD
+944ee9b04dc56ea27f0a8aca55170ff3d36bfe15 bc4edf860c9d6852b28774dc6c2a2dcfe13c906a AksTraL <akshat25chauhan.2005@gmail.com> 1735452664 +0530	checkout: moving from PC-Branch to main
+bc4edf860c9d6852b28774dc6c2a2dcfe13c906a 531672e7082492e16e67afc535f1d89a9680870d AksTraL <akshat25chauhan.2005@gmail.com> 1735452947 +0530	commit: Added Admin Authentication
+531672e7082492e16e67afc535f1d89a9680870d bc4edf860c9d6852b28774dc6c2a2dcfe13c906a AksTraL <akshat25chauhan.2005@gmail.com> 1735453195 +0530	reset: moving to bc4edf860c9d6852b28774dc6c2a2dcfe13c906a
+bc4edf860c9d6852b28774dc6c2a2dcfe13c906a bc4edf860c9d6852b28774dc6c2a2dcfe13c906a AksTraL <akshat25chauhan.2005@gmail.com> 1735453303 +0530	reset: moving to HEAD
+bc4edf860c9d6852b28774dc6c2a2dcfe13c906a 944ee9b04dc56ea27f0a8aca55170ff3d36bfe15 AksTraL <akshat25chauhan.2005@gmail.com> 1735453304 +0530	checkout: moving from main to PC-Branch
+944ee9b04dc56ea27f0a8aca55170ff3d36bfe15 fce62e9330e3863e907dadd5594990be60019fbc AksTraL <akshat25chauhan.2005@gmail.com> 1735453311 +0530	commit: Added Admin Authentication
+fce62e9330e3863e907dadd5594990be60019fbc bc4edf860c9d6852b28774dc6c2a2dcfe13c906a AksTraL <akshat25chauhan.2005@gmail.com> 1735453419 +0530	checkout: moving from PC-Branch to main
+bc4edf860c9d6852b28774dc6c2a2dcfe13c906a bc4edf860c9d6852b28774dc6c2a2dcfe13c906a AksTraL <akshat25chauhan.2005@gmail.com> 1735453613 +0530	reset: moving to HEAD
+bc4edf860c9d6852b28774dc6c2a2dcfe13c906a bc4edf860c9d6852b28774dc6c2a2dcfe13c906a AksTraL <akshat25chauhan.2005@gmail.com> 1735453628 +0530	reset: moving to HEAD
+bc4edf860c9d6852b28774dc6c2a2dcfe13c906a bc4edf860c9d6852b28774dc6c2a2dcfe13c906a AksTraL <akshat25chauhan.2005@gmail.com> 1735453695 +0530	reset: moving to HEAD
+bc4edf860c9d6852b28774dc6c2a2dcfe13c906a bc4edf860c9d6852b28774dc6c2a2dcfe13c906a AksTraL <akshat25chauhan.2005@gmail.com> 1735453703 +0530	reset: moving to HEAD
+bc4edf860c9d6852b28774dc6c2a2dcfe13c906a bc4edf860c9d6852b28774dc6c2a2dcfe13c906a AksTraL <akshat25chauhan.2005@gmail.com> 1735453709 +0530	reset: moving to HEAD
+bc4edf860c9d6852b28774dc6c2a2dcfe13c906a bc4edf860c9d6852b28774dc6c2a2dcfe13c906a AksTraL <akshat25chauhan.2005@gmail.com> 1735453731 +0530	reset: moving to HEAD
+bc4edf860c9d6852b28774dc6c2a2dcfe13c906a 02f2d74473a7f61b2a2196b51d39a74ec0dda19f AksTraL <akshat25chauhan.2005@gmail.com> 1735456836 +0530	commit (merge): Added Admin Authentication
+02f2d74473a7f61b2a2196b51d39a74ec0dda19f 4a97f4c3e55d725e987c4335faed06b7161995ce AksTraL <akshat25chauhan.2005@gmail.com> 1735456852 +0530	commit: Added Admin Authentication
+4a97f4c3e55d725e987c4335faed06b7161995ce 1be8deef079c15b489c35bb2633cd21d7a026a65 AksTraL <akshat25chauhan.2005@gmail.com> 1735627640 +0530	commit: added store
+1be8deef079c15b489c35bb2633cd21d7a026a65 1be8deef079c15b489c35bb2633cd21d7a026a65 AksTraL <akshat25chauhan.2005@gmail.com> 1735633031 +0530	reset: moving to HEAD
+1be8deef079c15b489c35bb2633cd21d7a026a65 fce62e9330e3863e907dadd5594990be60019fbc AksTraL <akshat25chauhan.2005@gmail.com> 1735633032 +0530	checkout: moving from main to PC-Branch
+fce62e9330e3863e907dadd5594990be60019fbc f1ae3cbeff15711e4264eb0fc74120c4752b7b6b AksTraL <akshat25chauhan.2005@gmail.com> 1735633049 +0530	pull --tags origin main: Fast-forward
+f1ae3cbeff15711e4264eb0fc74120c4752b7b6b f1ae3cbeff15711e4264eb0fc74120c4752b7b6b AksTraL <akshat25chauhan.2005@gmail.com> 1735643127 +0530	checkout: moving from PC-Branch to main
+f1ae3cbeff15711e4264eb0fc74120c4752b7b6b 9158f72697d6fe72040ee84da1f5b7d6f6716401 AksTraL <akshat25chauhan.2005@gmail.com> 1735643158 +0530	commit: styled store
+9158f72697d6fe72040ee84da1f5b7d6f6716401 578e0d5db7cc6faba947714f8f48203f365b9c71 AksTraL <akshat25chauhan.2005@gmail.com> 1735646143 +0530	pull origin main: Fast-forward
+578e0d5db7cc6faba947714f8f48203f365b9c71 7723753391c7393a41ce27175f30898d08d462a2 AksTraL <akshat25chauhan.2005@gmail.com> 1735651335 +0530	commit: added hover effect to logo in store

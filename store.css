@@ -1,0 +1,338 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('./assets/index.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden; 
+  background-attachment: fixed; 
+  }
+  
+  .navbar {
+    background-color: #500073;
+    color: white;
+    
+  }
+  
+  .navbar-top {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.logo {
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+
+}
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .logo:hover {
+    height: 60px;
+    transition: all 300ms ease;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin: 0 20px;
+    max-width: 600px;
+    height: 40px; /* Set a fixed height for consistency */
+}
+
+.search-dropdown {
+    height: 100%; /* Match the height of the search bar */
+    padding: 0 8px; /* Adjust padding for proper spacing */
+    border: none;
+    background-color: #ddd;
+    border-radius: 3px 0 0 3px;
+}
+
+.search-input {
+    flex: 1;
+    height: 100%; /* Match the height of the search bar */
+    padding: 0 8px;
+    border: none;
+    outline: none;
+}
+
+.search-button {
+    height: 100%; /* Match the height of the search bar */
+    padding: 0 16px; /* Adjust padding for button size */
+    background-color:#ffd700;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+}
+
+.search-button:hover {
+    background-color: #ffd700;
+}
+
+  
+  .navbar-utils span {
+    margin: 0 10px;
+    font-size: 14px;
+  }
+  
+  .cart {
+    align-self: self-end;
+    background-color: #ffd700;
+    width: 200px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .navbar-bottom {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #2A004E;
+  }
+  
+  .navbar-bottom a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+  
+  .navbar-bottom .offer {
+    background-color:#ffd700;
+    color: #0071ce;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+/* Main Store Container */
+.store-container {
+    display: flex;
+    margin: 20px;
+    gap: 1px; /* Adds spacing between sidebar and product grid */
+}
+
+/* Sidebar */
+/* Sidebar Container */
+.sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #2a2a2a;
+    color: #fff;
+    padding: 20px;
+    gap: 10px;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Sidebar Heading */
+.sidebar h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+}
+
+/* Filter Sections */
+.filter-section {
+    margin-bottom: 30px;
+}
+
+/* Section Headings */
+.filter-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #febd69;
+    border-left: 4px solid #febd69;
+    padding-left: 10px;
+}
+
+/* Filter Lists */
+.filter-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.filter-section ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.filter-section ul li input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #febd69;
+}
+
+/* Range Input Styling */
+.filter-section input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+    -webkit-appearance: none;
+    background-color: #444;
+    height: 5px;
+    border-radius: 5px;
+}
+
+.filter-section input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #febd69;
+    cursor: pointer;
+}
+
+.filter-section input[type="range"]:focus {
+    outline: none;
+}
+
+/* Price Range Text */
+.filter-section p {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-top: 5px;
+}
+
+/* Aesthetic Scrollbar for Sidebar */
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #febd69;
+}
+
+
+/* Products Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    width: 80%;
+}
+
+/* Product card styling */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    transition: transform 300ms ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.image-container {
+    width: 100%;
+    overflow: hidden;
+    height: 200px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Button Styling */
+.add-to-cart-btn {
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: #007bff;
+    border: solid 4px hsl(50deg 100% 50%);
+    font-family: inherit;
+    margin-top: auto;
+}
+
+.default-btn,
+.hover-btn {
+    background-color: #007bff;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.hover-btn {
+    position: absolute;
+    inset: 0;
+    background-color: hsl(255deg 50% 49%);
+    transform: translate(0%, 100%);
+}
+
+.default-btn span {
+    color: hsl(0, 0%, 100%);
+}
+
+.hover-btn span {
+    color: hsl(50deg 100% 50%);
+}
+
+button:hover .default-btn {
+    transform: translate(0%, -100%);
+}
+
+button:hover .hover-btn {
+    transform: translate(0%, 0%);
+}
+
+/* Sidebar styling */
+aside {
+    padding: 15px;
+    margin-top: 10px;
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+input[type="range"] {
+    width: 100%;
+}
