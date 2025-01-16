@@ -2,7 +2,7 @@
 
 const container = document.querySelector(".container").offsetWidth;
 document.querySelector(".btn-resume").addEventListener("click", function () {
-  window.open("./resume/Anant _Sureka_Resume.pdf", "_blank");
+  window.open("./resume/Anant _Resume.pdf", "_blank");
   // location.href = "./resume/Anant _Sureka_Resume.pdf";
 });
 
@@ -44,11 +44,11 @@ document
     );
   });
 
-document.querySelector(".email").addEventListener("click", function (e) {
+document.querySelector(".email-logo").addEventListener("click", function (e) {
   // location.href = "https://mail.google.com/mail/u/3/#inbox";
   // target = "_blank";
   e.preventDefault();
-  window.open("https://mail.google.com/mail/u/3/#inbox", "_blank");
+  window.open("mailto:sureka.anant2004@gmail.com");
 });
 
 const bar = document.querySelector(".nav-bar");

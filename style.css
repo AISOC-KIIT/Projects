@@ -225,6 +225,7 @@ h2 {
 /* CONTACTS */
 #contact {
   margin: 0 5rem;
+  margin-top: 20px;
   height: 45vh;
 }
 .contact-container {
