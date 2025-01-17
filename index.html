@@ -3,124 +3,184 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luxe - Creative Assistance</title>
+  <title>OneAutumnLeaf</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="header">
-    <div class="logo">AKSHAT</div>
+    <div class="brand-logo">
+        <div class="brand-logo-container">
+            <img src="brand logo.png" alt="Brand Logo" class="brand-logo-img">
+        </div>
+    </div>
+
     <nav class="navbar">
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="store.html">Store</a></li>
-      </ul>
-    </nav>
+        <ul class="nav-links">
+          <li><a href="#">Blogs</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="#" onclick="scrollToPortfolio()">Portfolio</a></li>
+          <li><a href="store/store.html">Store</a></li>
+        </ul>
+      </nav>
     <button class="admin-login-btn" onclick="window.open('admin.html', '_blank')">Admin Login</button>
   </header>
       
-      <section class="hero">
-        <div class="hero-image">
-          <img src="Untitled design (5).png" alt="Product Designer">
-        </div>
-        <div class="hero-content">
-          <h1>
-            <span class="highlight">Akshat</span> IS HERE TO BE YOUR ASSISTANCE
-          </h1>
-          <p>Data-driven Innovator | AI Enthusiast | Blockchain Visionary.
-          </br>
-          <div class="social-links">
-            <a href="https://www.instagram.com" target="_blank" class="social-btn instagram">Instagram</a>
-            <a href="https://www.linkedin.com" target="_blank" class="social-btn linkedin">LinkedIn</a>
-            <a href="https://www.twitter.com" target="_blank" class="social-btn twitter">Twitter</a>
-          </p>
-        </br>
+  <main class="hero">
+    <p class="name">AKSHAT CHAUHAN</p>
+    <h1>
+        <span class="highlight">Creator | Innovator | Explorer </span>
+    </h1>
+    <h2>An <span class="highlight">AI visionary</span>. Solving Real-World Problems Through <span class="highlight">Data</span></h2>
+    
+    <div class="social-links">
+        <!-- Instagram Logo -->
+        <a href="https://www.instagram.com/one._autumnleaf" target="_blank" class="social-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-label="Instagram">
+                <defs>
+                    <linearGradient id="instagramGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#ff6a00" />
+                        <stop offset="100%" stop-color="#ee0979" />
+                    </linearGradient>
+                </defs>
+                <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9 114.9-51.3 114.9-114.9-51.3-114.9-114.9-114.9zm0 186.6c-39.6 0-71.7-32.1-71.7-71.7s32.1-71.7 71.7-71.7 71.7 32.1 71.7 71.7-32.1 71.7-71.7 71.7zm146.4-194.3c0 14.9-12 26.9-26.9 26.9s-26.9-12-26.9-26.9 12-26.9 26.9-26.9 26.9 12 26.9 26.9zm76.1 27.2c-1.7-35.7-9.9-67.4-36.2-93.8s-58.1-34.5-93.8-36.2c-37.1-2.1-148.4-2.1-185.5 0-35.7 1.7-67.4 9.9-93.8 36.2s-34.5 58.1-36.2 93.8c-2.1 37.1-2.1 148.4 0 185.5 1.7 35.7 9.9 67.4 36.2 93.8s58.1 34.5 93.8 36.2c37.1 2.1 148.4 2.1 185.5 0 35.7-1.7 67.4-9.9 93.8-36.2s34.5-58.1 36.2-93.8c2.1-37.1 2.1-148.4 0-185.5zm-48.3 224.5c-7.8 19.6-22.9 34.7-42.5 42.5-29.4 11.7-99.2 9-132.7 9s-103.4 2.6-132.7-9c-19.6-7.8-34.7-22.9-42.5-42.5-11.7-29.4-9-99.2-9-132.7s-2.6-103.4 9-132.7c7.8-19.6 22.9-34.7 42.5-42.5 29.4-11.7 99.2-9 132.7-9s103.4-2.6 132.7 9c19.6 7.8 34.7 22.9 42.5 42.5 11.7 29.4 9 99.2 9 132.7s2.7 103.4-9 132.7z" fill="url(#instagramGradient)" />
+            </svg>
+        </a>
+    
+        <!-- LinkedIn Logo -->
+        <a href="https://www.linkedin.com/in/akshat-chauhan-ai" target="_blank" class="social-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-label="LinkedIn">
+                <defs>
+                    <linearGradient id="linkedinGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#ff6a00" />
+                        <stop offset="100%" stop-color="#ee0979" />
+                    </linearGradient>
+                </defs>
+                <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" fill="url(#linkedinGradient)" />
+            </svg>
+        </a>
 
-        </div>
-      </section>
-      
+        <!-- GitHub Logo -->
+<a href="https://github.com/AkZcH" target="_blank" class="social-logo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" aria-label="GitHub">
+        <defs>
+            <linearGradient id="githubGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#ff6a00" />
+                <stop offset="100%" stop-color="#ee0979" />
+            </linearGradient>
+        </defs>
+        <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" fill="url(#githubGradient)" />
+    </svg>
+</a>
 
-  <!-- <section class="services">
-    <h2>OUR SERVICE</h2>
-    <div class="service-list">
-      <div class="tech-card">
-        <img src="https://via.placeholder.com/50" alt="Branding">
-        <h3>Branding</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="service">
-        <img src="https://via.placeholder.com/50" alt="UI/UX">
-        <h3>UI/UX</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="service">
-        <img src="https://via.placeholder.com/50" alt="Product Design">
-        <h3>Product Design</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
     </div>
-  </section> -->
-
+    
+    
+    <button class="futuristic-button shadow-lg  rounded">Get Started</button>
+</main>
+      <!-- ------------------------------About me------------------------------ -->
+       
   <section class="About Us">
     <div class="tech-stack-section">
-        <h1 class="Service-Heading">What I Do</h1>
+        <h1 class="Service-Heading">// What I Do</h1>
         <div class="tech-stack-container">
             <div class="tech-card">
                 <div class="image-container">
-                    <img src="tech.jpg" alt="Web Development">
+                    <img src="webdev.avif" alt="Web Development">
+                </div>
+                <div class="logo-container">
+                    <img src="html.png" alt="" class="tech-logo">
+                    <img src="css-logo.png" alt="Logo 2" class="tech-logo">
+                    <img src="js.png" alt="Logo 2" class="tech-logo">
+                    <img src="nodejs-logo-svgrepo-com.svg" alt="Logo 2" class="tech-logo">
+                    <img src="mongodb-icon-1-1.svg" alt="Logo 2" class="tech-logo">
                 </div>
                 <h2>Web Development</h2>
-                <p>Be part of groundbreaking tech innovations and projects.</p>
-                
+                <p>Building scalable web solutions with streamlined CI/CD pipelines.</p>
             </div>
+            
             <div class="tech-card">
                 <div class="image-container">
-                    <img src="Desig team.png" alt="Data Analytics">
+                    <img src="Deep_Learning.jpeg" alt="Machine Learning">
+                </div>
+                <div class="logo-container">
+                    <img src="python-programming-language-icon.png" alt="Logo 1" class="tech-logo">
+                    <img src="google-tensorflow-icon.png" alt="Logo 2" class="tech-logo">
+                    <img src="2048px-Keras_logo.svg.png" alt="Logo 2" class="tech-logo">
+                    <img src="pytorch-icon-1694x2048-jgwjy3ne.png" alt="Logo 2" class="tech-logo">
+
                 </div>
                 <h2>Machine Learning</h2>
-                <p>Bring your creativity to life through visual design and branding.</p>
+                <p>Crafting intelligent systems and unlocking AI's creative potential.</p>
             </div>
+            
             <div class="tech-card">
                 <div class="image-container">
-                    <img src="Public.jpg" alt="Machine Learning & Gen AI">
+                    <img src="gaminf.jpg" alt="Web Development">
+                </div>
+                <div class="logo-container">
+                    <img src="valorant.jpg" alt="Logo 1" class="tech-logo">
+                    <img src="game-for-peace-Game-for-Peace-Icon-2.avif" alt="Logo 2" class="tech-logo">
+                    <img src="call-of-duty-mobile-logo.jpg" alt="Logo 2" class="tech-logo">
+                    <img src="images (3).jpg" alt="Logo 2" class="tech-logo">
+                    <img src="New_Mobile_Legends_Bang_Bang_2020_Logo.png" alt="Logo 2" class="tech-logo">
+
+
                 </div>
                 <h2>Gaming</h2>
-                <p>Shape our outreach and communications.</p>
+                <p>Immersing players in virtual worlds with precision and strategy.</p>
             </div>
+            
         </div>
         <div class="tech-stack-container">
-          <div class="tech-card">
-              <div class="image-container">
-                  <img src="tech.jpg" alt="Web Development">
-              </div>
-              <h2>Blockchain Development</h2>
-              <p>Be part of groundbreaking tech innovations and projects.</p>
-              
-          </div>
-          <div class="tech-card">
-              <div class="image-container">
-                  <img src="Desig team.png" alt="Data Analytics">
-              </div>
-              <h2>Competitive Programming</h2>
-              <p>Bring your creativity to life through visual design and branding.</p>
-          </div>
-          <div class="tech-card">
-              <div class="image-container">
-                  <img src="Public.jpg" alt="Machine Learning & Gen AI">
-              </div>
-              <h2>Cybersecurity</h2>
-              <p>Shape our outreach and communications.</p>
-          </div>
+            <div class="tech-card">
+                <div class="image-container">
+                    <img src="blockchain.jpg" alt="Web Development">
+                </div>
+                <div class="logo-container">
+                    <img src="ethereum-eth-logo.png" alt="Logo 1" class="tech-logo">
+                    <img src="solidity-icon.png" alt="Logo 2" class="tech-logo">
+                </div>
+                <h2>BlockChain</h2>
+                <p>Revolutionizing systems with secure and decentralized technologies.</p>
+            </div>
+            
+            <div class="tech-card">
+                <div class="image-container">
+                    <img src="Datascience.jpg" alt="Web Development">
+                </div>
+                <div class="logo-container">
+                    <img src="microsoft-excel-icon.png" alt="Logo 1" class="tech-logo">
+                    <img src="power-bi-icon.png" alt="Logo 2" class="tech-logo">
+                    <img src="tableau-software.svg" alt="Logo 2" class="tech-logo">
+                    <img src="google-bigquery-logo-1.svg" alt="Logo 2" class="tech-logo">
+
+
+                </div>
+                <h2>Data Analytics</h2>
+                <p>Turning data into actionable insights for smarter decisions.</p>
+            </div>
+            
+            <div class="tech-card">
+                <div class="image-container">
+                    <img src="wallpapersden.com_cybersecurity-core_1927x1080.jpg" alt="Web Development">
+                </div>
+                <div class="logo-container">
+                    <img src="Kali-dragon-icon.svg.png" alt="Logo 1" class="tech-logo">
+                    <img src="logo2.png" alt="Logo 2" class="tech-logo">
+                </div>
+                <h2>Cyber Security</h2>
+                <p>Protecting digital landscapes from evolving cyber threats.</p>
+            </div>
+            
       </div>
 
 
     </div>
 </section>
-
+<!------------------------------------------------------------ Projects ------------------------------------------------------------>
   <section class="About Us">
     <div class="tech-stack-section">
-        <h1 class="Project-Heading">My Projects</h1>
+        <h1 class="Project-Heading">// My Projects</h1>
         <div class="tech-stack-container">
             <div class="tech-card">
                 <div class="image-container">
@@ -133,7 +193,7 @@
             </div>
             <div class="tech-card">
                 <div class="image-container">
-                    <img src="Desig team.png" alt="Data Analytics">
+                    <img src="Screenshot 2025-01-16 095648.png" alt="Data Analytics">
                 </div>
                 <h2>Reviews Sentiment Analyzer</h2>
                 <p>Bring your creativity to life through visual design and branding.</p>
@@ -155,27 +215,143 @@
                 <p>Drive innovation and future growth.</p>
 
             </div>
+            
             <div class="tech-card">
                 <div class="image-container">
                     <img src="Broadcasting.jpg" alt="Data Analytics">
                 </div>
-                <h2>Customer Segmentation Model</h2>
+                <h2>Price Prediction Model</h2>
                 <p>Tell our story through engaging and powerful content & Share our message through dynamic audio-visual mediums.</p>
             </div>
-            <div class="tech-card">
+
+            <div class="tech-card"><a href="projects.html">
                 <div class="image-container">
                     <img src="digital-marketing-team.jpg" alt="Machine Learning & Gen AI">
                 </div>
-                <h2>Price Prediction Model</h2>
+                <h2>View More -></h2>
                 <p>Develop strategies to engage our audience and grow our reach.</p>
+            </a>
             </div>
         </div>
     </div>
 </section>
+
+<section class="extra-stuff-section">
+    <h1 class="extra-section-title">Some extra stuff</h1>
+    <div class="cards-container">
+        <!-- Extra Card 1 -->
+        <div class="extra-card">
+            <div class="image-container">
+                <img src="Deep_Learning.jpeg" alt="Technical Head" class="extra-card-image">
+            </div>
+            <h2 class="extra-card-title">Technical Head @GeeksForGeeks KIIT Chapter</h2>
+            <p class="extra-card-description">Led a society of 200+ members and co-ordinated 20+ projects and 5+ events.</p>
+        </div>
+
+        <!-- Extra Card 2 -->
+        <div class="extra-card">
+            <div class="image-container">
+                <img src="image2.jpg" alt="President CyberVault" class="extra-card-image">
+            </div>
+            <h2 class="extra-card-title">Content Creation Co-Lead @CyberVault</h2>
+            <p class="extra-card-description">Led a dedicated cybersecurity society, organized 5+ workshops and 3+ CTFs.</p>
+        </div>
+
+        <!-- Extra Card 3 -->
+        <div class="extra-card">
+            <div class="image-container">
+                <img src="image3.jpg" alt="ML Team Member" class="extra-card-image">
+            </div>
+            <h2 class="extra-card-title">Web Developer at various other societies</h2>
+            <p class="extra-card-description">Conducted classes and events to spread the knowledge of Machine Learning.</p>
+        </div>
+    </div>
+    </br>
+    <div class="custom-cards-container">
+        <!-- Standard Card -->
+        <div class="extra-card standard-card">
+            <div class="image-container">
+                <img src="image4.jpg" alt="Standard Card" class="extra-card-image">
+            </div>
+            <h2>Standard Card</h2>
+            <p>This is a standard-sized card.</p>
+        </div>
+
+        <!-- Double-Width Card -->
+        <div class="extra-card double-card">
+            <div class="image-container vertical-image-container">
+                <img src="blockchain.jpg" alt="Double-Width Card" class="extra-card-image">
+            </div>
+            <h2>Double-Width Card</h2>
+            <p>This card is twice as wide as the standard card and fits within the same row.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- <section class="custom-section">
+    <div class="custom-cards-container">
+        <div class="extra-card standard-card">
+            <h2>Standard Card</h2>
+            <p>This is a standard-sized card.</p>
+        </div>
+
+        <div class="extra-card double-card">
+            <h2>Double-Width Card</h2>
+            <p>This card is twice as wide as the standard card and fits within the same row.</p>
+        </div>
+    </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="footer-container">
+      <!-- Logo and Description -->
+      <div class="footer-section footer-about">
+          <div class="logo">
+              <a href="index.html">
+              </a>
+          </div>
+          <p class="footer-text">IMAGINE INNOVATE IMPLEMENT</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section footer-links">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-list">
+              <li><a href="#" class="footer-link">Home</a></li>
+              <li><a href="about.html" class="footer-link">About</a></li>
+              <li><a href="#" class="footer-link">Events</a></li>
+              <li><a href="#" class="footer-link">Gallery</a></li>
+              <li><a href="#" class="footer-link">Contact</a></li>
+          </ul>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="footer-section footer-contact">
+          <h3 class="footer-title">Contact Me</h3>
+          <p class="footer-text">Email: akshat25chauhan.@gmail.com</p>
+          <p class="footer-text">Phone: +91 629-145-8328</p>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="footer-section footer-social">
+          <h3 class="footer-title">Follow Us</h3>
+          <div class="social-icons">
+              <a href="#" class="footer-social-icon" style="background-color: #4267B2;"><i class="fab fa-facebook-f"></i> Facebook</a>
+              <a href="#" class="footer-social-icon" style="background-color: #1DA1F2;"><i class="fab fa-twitter"></i> Twitter</a>
+              <a href="#" class="footer-social-icon" style="background-color: #E1306C;"><i class="fab fa-instagram"></i> Instagram</a>
+              <a href="#" class="footer-social-icon" style="background-color: #2867B2;"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+          </div>
+      </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+      <p class="footer-text">&copy; 2025 Akshat Chauhan. All rights reserved.</p>
+  </div>
+</footer>
   
-
-
-
   <script src="script.js"></script>
   <script src="app.js"></script>
 

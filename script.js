@@ -42,3 +42,9 @@ rightArrow.addEventListener('click', () => {
 
 // Initial sizing
 updateCardSizes();
+
+
+function scrollToPortfolio() {
+  const section = document.getElementById("About Us");
+  section.scrollIntoView({ behavior: "smooth" });
+}
