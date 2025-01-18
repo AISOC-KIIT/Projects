@@ -45,6 +45,6 @@ updateCardSizes();
 
 
 function scrollToPortfolio() {
-  const section = document.getElementById("About Us");
+  const section = document.getElementById("About Us tech");
   section.scrollIntoView({ behavior: "smooth" });
 }

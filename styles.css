@@ -203,7 +203,7 @@ header {
   background-color: #000;
 }
 
-.navbar .logo {
+/* .navbar .logo {
   font-weight: bold;
   font-size: 18px;
   letter-spacing: 2px;
@@ -220,7 +220,7 @@ header {
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
-}
+} */
 
 .hire-me {
   background: linear-gradient(90deg, #7f00ff, #e100ff);
@@ -233,12 +233,13 @@ header {
 }
 
 .hero {
-  margin-top: 15vh;
   margin-left: 20%;
   text-align: center;
   padding: 100px 20px;
   max-width: 800px;
   height: 100vh;
+  margin-top: 5vh;
+  align-items: center;
 }
 
 .hero .name {
@@ -557,6 +558,29 @@ header {
 .tech-logo:hover {
   transform: scale(1.2); /* Slight zoom on hover */
 }
+
+.repo-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(135deg, #000, #000, #222);
+  border: 2px solid rgba(255, 255, 255, 0.2); 
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 60%; /* Button now takes up 40% of the card's width */
+  text-align: center; /* Ensures the text inside is centered */
+  margin-left: auto; /* Centers the button */
+  margin-right: auto;
+}
+
+.repo-button:hover {
+  transform: translateY(-5px);
+}
+
 
 
 
