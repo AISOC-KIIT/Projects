@@ -45,6 +45,15 @@ updateCardSizes();
 
 
 function scrollToPortfolio() {
-  const section = document.getElementById("About Us tech");
+  const section = document.getElementById("portfolio");
   section.scrollIntoView({ behavior: "smooth" });
 }
+
+
+// script.js
+function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active');
+}
+
+

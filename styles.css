@@ -90,6 +90,13 @@ body {
   z-index: 10; /* Ensure the navbar is above other elements */
 }
 
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
 .nav-links {
   display: flex;
   justify-content: center;
@@ -161,6 +168,44 @@ body {
 .nav-links a:hover::after {
   width: 100%; /* Fully underline */
   left: 0;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-icon .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none; /* Initially hide the navbar links */
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show links when menu is active */
+  }
 }
 
 

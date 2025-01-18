@@ -15,12 +15,19 @@
     </div>
 
     <nav class="navbar">
-        <ul class="nav-links">
-          <li><a href="blog.html">Blogs</a></li>
-          <li><a href="about.html">About Me</a></li>
-          <li><a href="#" onclick="scrollToPortfolio()">Portfolio</a></li>
-          <li><a href="store/store.html">Store</a></li>
-        </ul>
+        <div class="nav-container">
+          <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <ul class="nav-links">
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="#" onclick="scrollToPortfolio()">Portfolio</a></li>
+            <li><a href="store/store.html">Store</a></li>
+          </ul>
+        </div>
       </nav>
     <button class="admin-login-btn" onclick="window.open('admin.html', '_blank')">Admin Login</button>
   </header>
@@ -79,7 +86,7 @@
 </main>
       <!-- ------------------------------About me------------------------------ -->
        
-  <section class="About Us tech">
+  <section id="portfolio" class="About Us tech">
     <div class="tech-stack-section">
         <h1 class="Service-Heading">// What I Do</h1>
         <div class="tech-stack-container">
@@ -189,7 +196,7 @@
     </div>
 </section>
 <!------------------------------------------------------------ Projects ------------------------------------------------------------>
-  <section class="About Us">
+  <section id="portfolio" class="About Us">
     <div class="tech-stack-section">
         <h1 class="Project-Heading">// My Projects</h1>
         <div class="tech-stack-container">
@@ -369,7 +376,6 @@
 </footer>
   
   <script src="script.js"></script>
-  <script src="app.js"></script>
 
 
 </body>
