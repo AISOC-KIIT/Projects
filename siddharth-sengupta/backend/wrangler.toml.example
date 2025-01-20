@@ -1,0 +1,9 @@
+#copy these to wrangler.toml and fill out DATABASE_URL and JWT_SECRET
+
+name = "backend"
+compatibility_date = "2023-12-01"
+
+[vars]
+DATABASE_URL = "your prisma accelerate url"
+
+JWT_SECRET = "your jwt secret"
