@@ -1,0 +1,341 @@
+@media (max-width: 1400px) {
+  .about-myself {
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+  }
+  span {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}
+@media (max-width: 1300px) {
+  .conatiner {
+    max-width: 1200px;
+  }
+  #contact {
+    margin-top: 100px;
+  }
+  .about-myself {
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+  }
+  span {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  #Projects {
+    height: 75vh;
+  }
+}
+
+@media (max-width: 1100px) {
+  .conatiner {
+    max-width: 1000px;
+  }
+  #about {
+    margin-bottom: 50px;
+  }
+  .about-myself,
+  .about-1 {
+    font-size: 1rem;
+  }
+  #skills {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 900px) {
+  .conatiner {
+    max-width: 800px;
+  }
+  nav {
+    height: 13vh;
+  }
+  .about-myself,
+  .about-1 {
+    font-size: 0.85rem;
+  }
+  span {
+    font-size: 0.87rem;
+    font-weight: 100;
+  }
+  .overview {
+    font-size: 0.85rem;
+  }
+  .logo,
+  .nav-links {
+    font-size: 1rem;
+  }
+  #profile {
+    height: 50vh;
+  }
+
+  #about {
+    height: 25vh;
+  }
+  .heading {
+    font-size: 1.5rem;
+  }
+  .section_text_1,
+  .section_text_2 {
+    font-size: 1.5rem;
+  }
+  .name {
+    font-size: 2rem;
+  }
+  .btn-resume {
+    padding: 0.75rem;
+  }
+  #skills {
+    height: 35vh;
+  }
+  .skill-img {
+    margin-bottom: 5px;
+  }
+  .java {
+    width: 80px;
+  }
+  .html {
+    width: 110px;
+  }
+  .css {
+    width: 50px;
+  }
+  .label {
+    font-size: 1.5rem;
+  }
+
+  .javascript {
+    width: 50px;
+  }
+  #Projects {
+    height: 55vh;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  .bankist-img {
+    width: 400px;
+  }
+  .contact-container {
+    width: 350px;
+    gap: 10px;
+  }
+  .email,
+  .linkedin-text {
+    font-size: 0.85rem;
+  }
+  .linkedin,
+  .email-logo,
+  .github {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
+@media (max-width: 700px) {
+  .conatiner {
+    max-width: 650px;
+  }
+  .about-myself,
+  .about-1 {
+    font-size: 0.7rem;
+    line-height: 1;
+  }
+  span {
+    font-size: 0.87rem;
+    font-weight: 100;
+  }
+  #Projects {
+    margin-bottom: 150px;
+  }
+  .contact-container {
+    width: 350px;
+    gap: 10px;
+  }
+  .email,
+  .linkedin-text {
+    font-size: 0.75rem;
+  }
+  .linkedin,
+  .email-logo,
+  .github {
+    height: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .conatiner {
+    max-width: 450px;
+  }
+  #about {
+    height: 28vh;
+  }
+  .html,
+  .css,
+  .java {
+    padding-bottom: 7px;
+  }
+  .css {
+    padding-bottom: 9 px;
+  }
+  h2 {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 450px) {
+  .conatiner {
+    max-width: 400px;
+  }
+  .logo {
+    font-size: 1.1rem;
+  }
+  .desktop-nav {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  nav {
+    justify-content: center;
+    align-items: center;
+    height: 11vh;
+    gap: 50px;
+    /* opacity: 0; */
+  }
+  .nav-links {
+    gap: 10px;
+    list-style: none;
+    /* margin-right: 90px; */
+    pointer-events: none;
+    font-size: 0.8rem;
+    opacity: 0;
+    font-size: 0.9rem;
+    cursor: default;
+  }
+  .nav-bar {
+    opacity: 100;
+    top: 35px;
+    right: 35px;
+    width: 30px;
+    height: auto;
+  }
+  /* .nav-close {
+    top: 50px;
+    right: 50px;
+    width: 30px;
+    height: auto;
+  } */
+  .css {
+    margin-right: 20px;
+  }
+  .javascript {
+    transform: translateY(-13px);
+    /* transform: translateX(10px); */
+  }
+  .overview {
+    font-size: 0.7rem;
+  }
+  .contact-container {
+    width: 250px;
+    margin-right: 15rem;
+    align-self: center;
+    /* justify-self: center; */
+  }
+  .email,
+  .linkedin-text {
+    font-size: 0.5rem;
+  }
+  .description {
+    margin-left: 10px;
+    text-align: start;
+  }
+  .linkedin,
+  .email-logo,
+  .github {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+  .about-1,
+  .about-myself {
+    font-size: 0.6rem;
+  }
+  .label {
+    font-size: 1.3rem;
+  }
+  span {
+    color: black;
+  }
+}
+@media (max-width: 400px) {
+  .conatiner {
+    max-width: 350px;
+  }
+  .logo {
+    font-size: 1rem;
+  }
+  .label {
+    font-size: 1.3rem;
+  }
+  .desktop-nav {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  nav {
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    gap: 50px;
+  }
+  .nav-close {
+    top: 20px;
+    right: 20px;
+    margin-top: 10px;
+  }
+  .nav-bar {
+    top: 20px;
+    right: 20px;
+    margin-top: 10px;
+  }
+  .nav-links {
+    gap: 0.5rem;
+    list-style: none;
+    font-size: 0.5rem;
+  }
+  span {
+    font-size: 0.7rem;
+    font-weight: 300;
+  }
+  .skill-img {
+    width: 30px;
+  }
+  .java,
+  .html {
+    width: 55px;
+    height: 60px;
+  }
+  .html,
+  .css {
+    padding-bottom: 20px;
+  }
+  .javascript {
+    width: 35px;
+    align-self: center;
+    transform: translate(0, -15px);
+  }
+  .contact-container {
+    width: 200px;
+    margin-right: 10rem;
+  }
+  .email,
+  .linkedin-text {
+    font-size: 0.3rem;
+  }
+  .linkedin,
+  .email-logo,
+  .github {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+  .overview,
+  .about-1,
+  .about-myself {
+    font-size: 0.4rem;
+  }
+}
